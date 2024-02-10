@@ -1,11 +1,10 @@
 from telethon import TelegramClient, events, Button
 
-# Set up your Telegram API credentials
-API_ID = 'your_api_id'
-API_HASH = 'your_api_hash'
+# Set up your Telegram bot token
+BOT_TOKEN = 'your_bot_token'
 
 # Create a TelegramClient instance
-client = TelegramClient('vote_bot_session', API_ID, API_HASH)
+client = TelegramClient('vote_bot_session', api_id=None, api_hash=None, bot_token=BOT_TOKEN)
 
 
 # Handler for processing votes
