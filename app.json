@@ -8,7 +8,9 @@
     "OWNER_ID": 5911205161,
     "SUDO_USERS": [5911205161],
     "HEROKU_APP_NAME": "your_heroku_app_name",
-    "HEROKU_API_KEY": "your_heroku_api_key_here"
+    "HEROKU_API_KEY": "your_heroku_api_key_here",
+    "API_ID": "your_api_id_here",
+    "API_HASH": "your_api_hash_here"
   },
   "formation": {
     "worker": {
