@@ -1,7 +1,7 @@
 from telethon import TelegramClient, events, Button
 
 # Set up your Telegram bot token
-BOT_TOKEN = 'your_bot_token'
+BOT_TOKEN = '6502103329:AAFLhdsQ2OdtmNKOh1lITyQNPFX4XKHgJ44'
 
 # Create a TelegramClient instance
 client = TelegramClient('vote_bot_session', api_id=None, api_hash=None, bot_token=BOT_TOKEN)
@@ -29,7 +29,7 @@ async def update_handler(event):
 # Handler for support button
 @client.on(events.NewMessage(pattern='/support'))
 async def support_handler(event):
-    await event.respond('For support, join our Telegram group: [Support Group](link)')
+    await event.respond('For support, join our Telegram group: [Support Group](https://t.me/BWANDARLOK)')
 
 
 # Start the client
