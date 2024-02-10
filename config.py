@@ -1,5 +1,4 @@
 import os
-from telethon import TelegramClient, events, Button
 import json
 
 # Read configurations from app.json file
@@ -21,3 +20,6 @@ HEROKU_APP_NAME = app_config.get('HEROKU_APP_NAME')
 # Heroku API key (optional, required only if deploying to Heroku)
 HEROKU_API_KEY = app_config.get('HEROKU_API_KEY')
 
+# API ID and API hash for Telethon
+API_ID = app_config.get('API_ID')
+API_HASH = app_config.get('API_HASH')
