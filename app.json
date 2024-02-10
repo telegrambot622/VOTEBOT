@@ -1,0 +1,33 @@
+{
+  "name": "vote-bot",
+  "description": "Vote bot for Telegram with support for updates and support group",
+  "repository": "https://github.com/your-username/VOTEBOT",
+  "keywords": ["telegram", "bot", "vote"],
+  "image": "heroku/python",
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API hash",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram user ID (owner of the bot)",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
