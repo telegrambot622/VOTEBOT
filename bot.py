@@ -1,6 +1,10 @@
 import os
 from telethon import TelegramClient, events, Button
-from config import API_ID, API_HASH, BOT_TOKEN
+
+# Set your API ID, API hash, and bot token here
+API_ID = "23202176"
+API_HASH = 'a76d6b733ac7f8741a356d1df5f44d51'
+BOT_TOKEN = '6502103329:AAFLhdsQ2OdtmNKOh1lITyQNPFX4XKHgJ44'
 
 # Create a TelegramClient instance
 client = TelegramClient('vote_bot_session', API_ID, API_HASH)
@@ -32,5 +36,5 @@ async def support_handler(event):
 
 
 # Start the client
-client.start()
+client.start(bot_token=BOT_TOKEN)
 client.run_until_disconnected()
