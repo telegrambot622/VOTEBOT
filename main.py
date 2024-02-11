@@ -1,9 +1,22 @@
-import os
+ import os
 import logging
+import sentry_sdk
+from sentry_sdk.integrations.logging import LoggingIntegration
 from telethon import TelegramClient, events
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Initialize Sentry
+sentry_logging = LoggingIntegration(
+    level=logging.INFO,       # Capture info and above as breadcrumbs
+    event_level=logging.ERROR  # Send errors as events
+)
+
+sentry_sdk.init(
+    dsn=os.environ.get('SENTRY_DSN'),
+    integrations=[sentry_logging]
+)
 
 # Load variables from environment variables (set in Heroku)
 API_ID = int(os.environ.get('API_ID'))
@@ -36,3 +49,4 @@ if __name__ == "__main__":
         client.run_until_disconnected()
     except Exception as e:
         logging.error(f"Error occurred: {e}")
+        sentry_sdk.capture_exception(e)
