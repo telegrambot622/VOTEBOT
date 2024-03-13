@@ -2,9 +2,9 @@ import os
 from telethon import TelegramClient, events, Button
 
 # Set your API ID, API hash, and bot token here
-API_ID = "23202176"
-API_HASH = 'a76d6b733ac7f8741a356d1df5f44d51'
-BOT_TOKEN = '6502103329:AAFLhdsQ2OdtmNKOh1lITyQNPFX4XKHgJ44'
+API_ID = "23378380"
+API_HASH = '5ddcf1df1360fe446b06dd94bd3ad0c6'
+BOT_TOKEN = '6637760861:AAHoIka3LaTSCTOoQLX5isNWIGFF7Ho_WAs'
 
 # Create a TelegramClient instance
 client = TelegramClient('vote_bot_session', API_ID, API_HASH)
@@ -32,7 +32,7 @@ async def update_handler(event):
 # Handler for support button
 @client.on(events.NewMessage(pattern='/support'))
 async def support_handler(event):
-    await event.respond('For support, join our Telegram group: [Support Group](https://t.me/BWANDARLOK)')
+    await event.respond('For support, join our Telegram group: [Support Group](https://t.me/Emotional_Feelings_Channel)')
 
 
 # Start the client
